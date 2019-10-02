@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="assets/vendor/linearicons/style.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<!-- MAIN CSS -->
 	<link rel="stylesheet" href="assets/css/main.css">
 	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
@@ -45,8 +46,8 @@
 					<ul class="nav">
 						<li><a href="#" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
 						<li>
-							<a href="#player" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Player</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-							<div id="subPages" class="collapse ">
+							<a href="#player" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Player</span> <i class="icon-submenu fa fa-user-o"></i></a>
+							<div id="player" class="collapse ">
 								<ul class="nav">
 									<li><a href="#player-profile" class="">Profile &nbsp; <span class="label label-success">GET</span></a></li>
 									<li><a href="#player-results" class="">Results &nbsp; <span class="label label-success">GET</span></a></li>
@@ -57,13 +58,16 @@
 							</div>
 						</li>
 						<li>
-							<a href="#subPages2" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Token 2</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-							<div id="subPages2" class="collapse ">
+							<a href="#search" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Search</span> <i class="icon-submenu fa fa-search"></i></a>
+							<div id="search" class="collapse ">
 								<ul class="nav">
-									<li><a href="#" class="">Check Token &nbsp; <span class="label label-success">GET</span></a></li>
-									<li><a href="#" class="">Generate Token &nbsp; <span class="label label-primary">POST</span></a></li>
-									<li><a href="#" class="">Refresh Token &nbsp; <span class="label label-warning">PUT</span></a></li>
-									<li><a href="#" class="">Delete Token &nbsp; <span class="label label-danger">DELETE</span></a></li>
+									<li><a href="#search-all" class="">All &nbsp; <span class="label label-success">GET</span></a></li>
+									<li><a href="#search-player" class="">Players &nbsp; <span class="label label-success">GET</span></a></li>
+									<li><a href="#search-event" class="">Events &nbsp; <span class="label label-success">GET</span></a></li>
+									<li><a href="#search-high-school" class="">High Schools &nbsp; <span class="label label-success">GET</span></a></li>
+									<li><a href="#search-college" class="">Colleges &nbsp; <span class="label label-success">GET</span></a></li>
+									<li><a href="#search-club" class="">Clubs &nbsp; <span class="label label-success">GET</span></a></li>
+									
 								</ul>
 							</div>
 						</li>
