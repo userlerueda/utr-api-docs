@@ -18,8 +18,6 @@
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<!-- MAIN CSS -->
 	<link rel="stylesheet" href="assets/css/main.css">
-	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
-	<link rel="stylesheet" href="assets/css/demo.css">
 	<!-- GOOGLE FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
 	<!-- ICONS -->
@@ -2107,6 +2105,79 @@
     "maxNonRatingScaleChartTicks": 100,
     "nonRatingScaleStepSize": 20
   }
+}</pre>
+								</div>
+							</div>
+							<!-- END TABLE HOVER -->
+						</div>
+					</div>
+				</div>
+				<hr/>
+				<h1 style="margin-left: 10px;">Clubs</h1>
+				<hr/>
+				<div class="container-fluid" id="club-profile">
+					<h2 class="page-title"><strong>Profile<strong/></h2>
+					<h4 class="page-title">Club profile information including location, events, etc.</h4>
+					<div class="row">
+						<div class="">
+							<!-- TABLE HOVER -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title"><span class="label label-success">GET</span> <code>https://www.myutr.com/api/v1/club/{club_id}</code></h3>
+								</div>
+								<div class="panel-body">
+									<table class="table table-hover">
+										<thead>
+											<tr>
+												<th>Parameter</th>
+												<th>Type</th>
+												<th>Required?</th>
+												<th>Description</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Club ID</td>
+												<td><code>Integer</code></td>
+												<td><code>Required</code></td>
+												<td>The Club ID can be obtained using a <a href="#search-club">club search</a> or from a club URL on the <a href="https://www.myutr.com">Universal Tennis</a> website.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<!-- END TABLE HOVER -->
+						</div>
+						<div class="">
+							<!-- TABLE HOVER -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title">Response</h3>
+								</div>
+								<div class="panel-body">
+								<pre>{
+  "eventViewModel": null,
+  "id": "3478",
+  "firstName": "Novak",
+  "lastName": "Djokovic",
+  "gender": "M",
+  "city": null,
+  "state": null,
+  "singlesUtr": 16.16,
+  "ratingStatusSingles": "Rated",
+  "ratingProgressSingles": "100",
+  "ratingStatusImgageSingles": "https://universaltennis.com/azure/images/icons/status-rated.png?h=17",
+  "doublesUtr": 14.93,
+  "ratingStatusDoubles": "Rated",
+  "ratingProgressDoubles": "100",
+  "ratingStatusImgageDoubles": "https://universaltennis.com/azure/images/icons/status-rated.png?h=17",
+  "importSource": null,
+  "nationality": "SRB",
+  "myUtrSingles": 16.41,
+  "myUtrStatusSingles": "Unrated",
+  "myUtrDoubles": 11.61,
+  "myUtrStatusDoubles": "Unrated",
+  "memberId": null
 }</pre>
 								</div>
 							</div>
