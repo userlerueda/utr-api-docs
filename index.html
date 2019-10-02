@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>UTR API Documentation</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/vendor/linearicons/style.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="assets/css/main.css">
+	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+	<link rel="stylesheet" href="assets/css/demo.css">
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+</head>
+
+<body>
+	<!-- WRAPPER -->
+	<div id="wrapper">
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="brand">
+				<a href="/utr-api-docs"><img src="assets/img/BB98FFE7-E8B1-4A6B-8791-93A1D1293BDC.jpeg"></a>
+			</div>
+			<div class="container-fluid">
+				<div class="navbar-btn">
+					<button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
+				</div>
+			</div>
+		</nav>
+		<!-- END NAVBAR -->
+		<!-- LEFT SIDEBAR -->
+		<div id="sidebar-nav" class="sidebar">
+			<div class="sidebar-scroll">
+				<nav>
+					<ul class="nav">
+						<li><a href="#" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+						<li>
+							<a href="#player" data-toggle="collapse" class="collapsed"><i class="fa fa-user-o"></i> <span>Player</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="player" class="collapse ">
+								<ul class="nav">
+									<li><a href="#player-profile" class="">Profile &nbsp; <span class="label label-success">GET</span></a></li>
+									<li><a href="#player-results" class="">Results &nbsp; <span class="label label-success">GET</span></a></li>
+									<li><a href="#player-events" class="">Events &nbsp; <span class="label label-success">GET</span></a></li>
+									<li><a href="#player-clubs" class="">Clubs &nbsp; <span class="label label-success">GET</span></a></li>
+									<li><a href="#player-stats" class="">Statistics &nbsp; <span class="label label-success">GET</span></a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#search" data-toggle="collapse" class="collapsed"><i class="fa fa-search"></i> <span>Search</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="search" class="collapse ">
+								<ul class="nav">
+									<li><a href="#search-all" class="">All &nbsp; <span class="label label-success">GET</span></a></li>
+									<li><a href="#search-player" class="">Players &nbsp; <span class="label label-success">GET</span></a></li>
+									<li><a href="#search-event" class="">Events &nbsp; <span class="label label-success">GET</span></a></li>
+									<li><a href="#search-high-school" class="">High Schools &nbsp; <span class="label label-success">GET</span></a></li>
+									<li><a href="#search-college" class="">Colleges &nbsp; <span class="label label-success">GET</span></a></li>
+									<li><a href="#search-club" class="">Clubs &nbsp; <span class="label label-success">GET</span></a></li>
+									
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#auth" data-toggle="collapse" class="collapsed"><i class="fa fa-key"></i> <span>Authentication</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="auth" class="collapse ">
+								<ul class="nav">
+									<li><a href="#auth-login" class="">Login &nbsp; <span class="label label-success">GET</span></a></li>
+									<li><a href="#auth-logout" class="">Logout &nbsp; <span class="label label-success">GET</span></a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- END LEFT SIDEBAR -->
+		<!-- MAIN -->
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+				<div class="container-fluid" id="player-profile">
+					<h2 class="page-title">Profile</h2>
+					<h4 class="page-title">Profile information including UTR, location, etc.</h4>
+					<div class="row">
+						<div class="col-md-7">
+							<!-- TABLE HOVER -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title"><span class="label label-success">GET</span> <code>https://www.myutr.com/api/v1/player/{user_id}</code></h3>
+								</div>
+								<div class="panel-body">
+									<table class="table table-hover">
+										<thead>
+											<tr>
+												<th>Parameter</th>
+												<th>Type</th>
+												<th>Required?</th>
+												<th>Description</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>User ID</td>
+												<td><code>integer</code></td>
+												<td><code>Required</code></td>
+												<td>The User ID can be obtained using a <a href="#search-player">player search</a> or from a profile URL on the <a href="https://www.myutr.com">Universal Tennis</a> website.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<!-- END TABLE HOVER -->
+						</div>
+						<div class="col-md-5">
+							<!-- TABLE HOVER -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title">Response</h3>
+								</div>
+								<div class="panel-body">
+								<pre>{
+  "eventViewModel": null,
+  "id": "3478",
+  "firstName": "Novak",
+  "lastName": "Djokovic",
+  "gender": "M",
+  "city": null,
+  "state": null,
+  "singlesUtr": 16.16,
+  "ratingStatusSingles": "Rated",
+  "ratingProgressSingles": "100",
+  "ratingStatusImgageSingles": "https://universaltennis.com/azure/images/icons/status-rated.png?h=17",
+  "doublesUtr": 14.93,
+  "ratingStatusDoubles": "Rated",
+  "ratingProgressDoubles": "100",
+  "ratingStatusImgageDoubles": "https://universaltennis.com/azure/images/icons/status-rated.png?h=17",
+  "importSource": null,
+  "nationality": "SRB",
+  "myUtrSingles": 16.41,
+  "myUtrStatusSingles": "Unrated",
+  "myUtrDoubles": 11.61,
+  "myUtrStatusDoubles": "Unrated",
+  "memberId": null
+}</pre>
+								</div>
+							</div>
+							<!-- END TABLE HOVER -->
+						</div>
+					</div>
+				</div>
+				<hr/>
+				<div class="container-fluid" id="player-results">
+					<h2 class="page-title">Results</h2>
+					<h4 class="page-title">Fetches matches that count for a player's UTR.</h4>
+					<div class="row">
+						<div class="col-md-7">
+							<!-- TABLE HOVER -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title"><span class="label label-success">GET</span> <code>https://www.myutr.com/api/v1/player/{user_id}/results</code></h3>
+								</div>
+								<div class="panel-body">
+									<table class="table table-hover">
+										<thead>
+											<tr>
+												<th>Parameter</th>
+												<th>Type</th>
+												<th>Required?</th>
+												<th>Description</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>User ID</td>
+												<td><code>integer</code></td>
+												<td><code>Required</code></td>
+												<td>The User ID can be obtained using a <a href="#search-player">player search</a> or from a profile URL on the <a href="https://www.myutr.com">Universal Tennis</a> website.</td>
+											</tr>
+											<tr>
+												<td>Year</td>
+												<td><code>integer</code></td>
+												<td><code>Optional</code></td>
+												<td>Use <code>?year={year}</code> to filter results by a certain year. You may also use <code>?year=last</code> to get the latest results.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<!-- END TABLE HOVER -->
+						</div>
+						<div class="col-md-5">
+							<!-- TABLE HOVER -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title">Response</h3>
+								</div>
+								<div class="panel-body">
+								<pre>{
+  "wins": 58,
+  "losses": 14,
+  "withdrawls": 0,
+  "events": [
+    {
+      "id": 903854,
+      "name": "ATP Tokyo, Japan",
+      "isTms": false,
+      "timeZone": null,
+      "startDate": "2019-09-28T00:00:00",
+      "endDate": "2019-10-06T00:00:00",
+      "draws": [
+        {
+          "id": 4345548,
+          "tmsId": null,
+          "name": "Men's Singles Main Draw",
+          "teamType": "Singles",
+          "gender": "Male",
+          "results": [
+            {
+              "date": "2019-10-01T06:10:00",
+              "id": 17730479,
+              "clubIds": [],
+              "players": {
+                "winner1": {
+                  "id": "3478",
+                  "firstName": "Novak",
+                  "lastName": "Djokovic",
+                  "gender": "M",
+                  "city": null,
+                  "state": null,
+                  "singlesUtr": 16.16,
+                  "ratingStatusSingles": "Rated",
+                  "ratingProgressSingles": "100",
+                  "ratingStatusImgageSingles": "https://universaltennis.com/azure/images/icons/status-rated.png?h=17",
+                  "doublesUtr": 14.93,
+                  "ratingStatusDoubles": "Rated",
+                  "ratingProgressDoubles": "100",
+                  "ratingStatusImgageDoubles": "https://universaltennis.com/azure/images/icons/status-rated.png?h=17",
+                  "importSource": null,
+                  "nationality": "SRB",
+                  "myUtrSingles": 16.41,
+                  "myUtrStatusSingles": "Unrated",
+                  "myUtrDoubles": 11.61,
+                  "myUtrStatusDoubles": "Unrated",
+                  "memberId": null
+                },
+                "winner2": null,
+                "loser1": {
+                  "id": "95506",
+                  "firstName": "Alexei",
+                  "lastName": "POPYRIN",
+                  "gender": "M",
+                  "city": null,
+                  "state": null,
+                  "singlesUtr": 15.28,
+                  "ratingStatusSingles": "Rated",
+                  "ratingProgressSingles": "100",
+                  "ratingStatusImgageSingles": "https://universaltennis.com/azure/images/icons/status-rated.png?h=17",
+                  "doublesUtr": 14.66,
+                  "ratingStatusDoubles": "Rated",
+                  "ratingProgressDoubles": "100",
+                  "ratingStatusImgageDoubles": "https://universaltennis.com/azure/images/icons/status-rated.png?h=17",
+                  "importSource": null,
+                  "nationality": "AUS",
+                  "myUtrSingles": 15.28,
+                  "myUtrStatusSingles": "Rated",
+                  "myUtrDoubles": 14.66,
+                  "myUtrStatusDoubles": "Rated",
+                  "memberId": null
+                },
+                "loser2": null
+              },
+              "videos": null,
+              "round": {
+                "id": 6,
+                "code": "32",
+                "name": "Round of 32",
+                "size": 32,
+                "number": null
+              },
+              "sourceType": "sanctioned",
+              "completionType": "winnercompleted",
+              "outcome": "completed",
+              "isWinner": true,
+              "playerPostedResult": false,
+              "finalized": true,
+              "submittingMemberId": 0,
+              "excludeFromRating": false,
+              "actions": {
+                "delete": {
+                  "allowed": false
+                },
+                "edit": {
+                  "allowed": false
+                },
+                "accept": {
+                  "allowed": false
+                },
+                "reject": {
+                  "allowed": false
+                },
+                "resendInvite": {
+                  "allowed": false
+                }
+              },
+              "isRejected": false,
+              "score": {
+                "1": {
+                  "winner": 6,
+                  "loser": 4,
+                  "tiebreak": null,
+                  "winnerTiebreak": null
+                },
+                "2": {
+                  "winner": 6,
+                  "loser": 2,
+                  "tiebreak": null,
+                  "winnerTiebreak": null
+                }
+              },
+              "winner1Status": null,
+              "winner2Status": null,
+              "loser1Status": null,
+              "loser2Status": null
+            }
+          ]
+        }
+      ],
+      "results": []
+    }
+  ],
+  "winLossString": "58 - 14 ",
+  "utrRating": {
+    "show": true,
+    "rating": "16.16",
+    "ratingString": "UTR"
+  },
+  "myUtrRating": {
+    "show": false,
+    "rating": "16.41",
+    "ratingString": "UTR (P)"
+  }
+}</pre>
+								</div>
+							</div>
+							<!-- END TABLE HOVER -->
+						</div>
+					</div>
+				</div>
+				<hr/>
+<div class="container-fluid" id="player-events">
+					<h2 class="page-title">Events</h2>
+					<h4 class="page-title">Gets past, current, and future events of a player. This will only display "UTR" events, tournaments that use the UTR platform.</h4>
+					<div class="row">
+						<div class="col-md-7">
+							<!-- TABLE HOVER -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title"><span class="label label-success">GET</span> <code>https://www.myutr.com/api/v1/player/{user}/events</code></h3>
+								</div>
+								<div class="panel-body">
+									<table class="table table-hover">
+										<thead>
+											<tr>
+												<th>Parameter</th>
+												<th>Type</th>
+												<th>Required?</th>
+												<th>Description</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>User ID</td>
+												<td><code>integer</code></td>
+												<td><code>Required</code></td>
+												<td>The User ID can be obtained using a <a href="#search-player">player search</a> or from a profile URL on the <a href="https://www.myutr.com">Universal Tennis</a> website.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<!-- END TABLE HOVER -->
+						</div>
+						<div class="col-md-5">
+							<!-- TABLE HOVER -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title">Response</h3>
+								</div>
+								<div class="panel-body">
+								<pre>[
+  {
+    "id": 5449,
+    "name": "Nike Tennis Camp at University of North Texas Session 4",
+    "club": {
+      "id": 1697,
+      "name": "University of North Texas - Women",
+      "private": false,
+      "statusType": null,
+      "sanctioned": false,
+      "paymentsEnabled": false,
+      "verificationApplicationStatus": null,
+      "referralCode": null,
+      "tierTypeId": 0,
+      "tierType": {
+        "id": 6,
+        "name": "Pro College",
+        "maxOwners": 2,
+        "maxMembers": 0,
+        "maxOrganizers": 4,
+        "enablePayments": true,
+        "verificationAllowed": true,
+        "canRunEvents": true,
+        "canPostScores": false,
+        "isSearchable": false,
+        "isCollege": true,
+        "isHighSchool": false,
+        "permissionedTmsEventTypes": null
+      }
+    },
+    "currency": null,
+    "phone": "+18006453226",
+    "phoneCountryCode": "US",
+    "email": "tennis@ussportscamps.com",
+    "photoUrl": "5449/images/banner/deb6346f-d987-4f4f-993c-5cbb5eb6e00e.jpg",
+    "details": "Nike Tennis Camp at the University of North Texas excited to offer UTR and Verified UTR Events! We have partnered with Universal Tennis to provide level based UTR match play throughout our camps. In the afternoons, campers will have the opportunity to play matches which will be recorded for advancement under the UTR system. In addition, once a week, campers will have the option to participate in a “VERIFIED UTR EVENT” which will count towards their Verified UTR. \n\nIn order to participate, must first register for camp –https://www.ussportscamps.com/tennis/nike/university-of-north-texas-nike-tennis-camp",
+    "utrType": {
+      "id": 2,
+      "value": "sanctioned",
+      "label": "Verified UTR Event",
+      "description": "Must follow Verified Event Rules to count for Verified UTR rating."
+    },
+    "eventType": {
+      "id": 1,
+      "value": "tournament",
+      "label": "Tournament",
+      "description": "Create draws types such as round robins, compass draws, and traditional formats"
+    },
+    "surfaceType": null,
+    "eventPermissionType": {
+      "id": 1,
+      "value": "public",
+      "label": "Public",
+      "description": "Anyone can view and register for this event."
+    },
+    "published": true,
+    "playerVisibility": false,
+    "flatFee": 0,
+    "percentFee": 0.1,
+    "verificationFee": 0,
+    "passwordEnabled": true,
+    "eventState": {
+      "registrationState": {
+        "id": 3,
+        "value": "registration_closed",
+        "label": "Registration Closed",
+        "description": ""
+      },
+      "id": 5,
+      "value": "completed",
+      "label": "Event Completed",
+      "description": ""
+    },
+    "priceRange": "Free Event",
+    "priceRangeShort": "Free Event",
+    "eventLocations": [
+      {
+        "eventLocationType": null,
+        "locationId": null,
+        "latLng": [
+          33.2148412,
+          -97.13306829999999
+        ],
+        "display": "Denton, TX",
+        "googleFormattedName": "Denton, TX, USA",
+        "googlePlaceId": null,
+        "placeName": null,
+        "streetAddress": "",
+        "cityStateZip": "Denton, TX",
+        "cityName": "Denton",
+        "cityAbbr": "Denton",
+        "stateName": "Texas",
+        "stateAbbr": "TX",
+        "countryName": "United States",
+        "countryCode2": "US",
+        "countryCode3": "USA",
+        "countryIoc": "USA"
+      }
+    ],
+    "eventSchedule": {
+      "timeZone": {
+        "id": 43,
+        "value": "America/Chicago",
+        "label": "America/Chicago",
+        "description": "",
+        "offset": "-05:00",
+        "labelLong": "America/Chicago (-05:00)"
+      },
+      "registrationStartUtc": "2019-05-07T12:00:00",
+      "registrationEndUtc": "2019-07-23T01:00:00",
+      "eventStartUtc": "2019-07-22T13:00:00",
+      "eventEndUtc": "2019-07-24T22:00:00",
+      "drawPublishedUtc": null,
+      "maxEventEndUtc": null,
+      "maxResultDateUtc": null,
+      "maxPostScoreDateUtc": null,
+      "eventDatesShort": "Jul 22 - 24, 2019",
+      "eventDatesLong": "Mon, Jul 22 - Wed, Jul 24",
+      "eventStartShort": "Jul 22",
+      "eventEndShort": "Jul 24",
+      "eventStartMonth": "Jul",
+      "eventEndMonth": "Jul",
+      "eventStartDate": "22",
+      "eventStartYear": "2019",
+      "eventEndYear": "2019",
+      "eventEndDate": "24"
+    },
+    "eventDirectors": [
+      {
+        "memberId": 10204,
+        "memberEmail": "chaseh1988@yahoo.com",
+        "firstName": "Chase",
+        "lastName": "Hardin",
+        "displayName": "Chase Hardin",
+        "eventDirectorRole": {
+          "id": 1,
+          "value": "admin",
+          "label": "Admin",
+          "description": "Can modify any aspect of the event."
+        },
+        "playerProfileImages": {
+          "default": null,
+          "thumbnail": {
+            "oneX": null,
+            "twoX": null,
+            "threeX": null
+          },
+          "card": {
+            "oneX": null,
+            "twoX": null,
+            "threeX": null
+          },
+          "profile": {
+            "oneX": null,
+            "twoX": null,
+            "threeX": null
+          },
+          "icon": {
+            "oneX": null,
+            "twoX": null,
+            "threeX": null
+          }
+        },
+        "playerId": null
+      },
+      {
+        "memberId": 165111,
+        "memberEmail": "wshpiz@ussportscamps.com",
+        "firstName": "Nike ",
+        "lastName": "Tennis Camps",
+        "displayName": "Nike  Tennis Camps",
+        "eventDirectorRole": {
+          "id": 1,
+          "value": "admin",
+          "label": "Admin",
+          "description": "Can modify any aspect of the event."
+        },
+        "playerProfileImages": {
+          "default": null,
+          "thumbnail": {
+            "oneX": null,
+            "twoX": null,
+            "threeX": null
+          },
+          "card": {
+            "oneX": null,
+            "twoX": null,
+            "threeX": null
+          },
+          "profile": {
+            "oneX": null,
+            "twoX": null,
+            "threeX": null
+          },
+          "icon": {
+            "oneX": null,
+            "twoX": null,
+            "threeX": null
+          }
+        },
+        "playerId": null
+      }
+    ],
+    "eventClubJoinRequestType": null,
+    "currentMember": {
+      "isPlaying": true,
+      "clubMemberRole": null
+    },
+    "registeredCount": 85,
+    "paidDivisions": false,
+    "eventTours": [],
+    "photoImages": {
+      "default": "5449/images/banner/deb6346f-d987-4f4f-993c-5cbb5eb6e00e.jpg",
+      "banner": {
+        "oneX": "5449/images/banner/deb6346f-d987-4f4f-993c-5cbb5eb6e00e.jpg?size=1X&type=banner",
+        "twoX": "5449/images/banner/deb6346f-d987-4f4f-993c-5cbb5eb6e00e.jpg?size=2X&type=banner",
+        "threeX": "5449/images/banner/deb6346f-d987-4f4f-993c-5cbb5eb6e00e.jpg?size=3X&type=banner"
+      },
+      "dashboard": {
+        "oneX": "5449/images/banner/deb6346f-d987-4f4f-993c-5cbb5eb6e00e.jpg?size=1X&type=dashboard",
+        "twoX": "5449/images/banner/deb6346f-d987-4f4f-993c-5cbb5eb6e00e.jpg?size=2X&type=dashboard",
+        "threeX": "5449/images/banner/deb6346f-d987-4f4f-993c-5cbb5eb6e00e.jpg?size=3X&type=dashboard"
+      }
+    },
+    "hasPrizeMoney": false,
+    "prizeMoney": null,
+    "prizeMoneyText": null,
+    "prizeMoneyTextShort": null,
+    "gender": "Co-ed",
+    "utrRange": "1.0 - 16.0",
+    "teamType": "Singles"
+  }
+]</pre>
+								</div>
+							</div>
+							<!-- END TABLE HOVER -->
+						</div>
+					</div>
+				</div>
+				<hr/>
+<div class="container-fluid" id="player-clubs">
+					<h2 class="page-title">Clubs</h2>
+					<h4 class="page-title">Shows what clubs a player is in including high schools and colleges.</h4>
+					<div class="row">
+						<div class="col-md-7">
+							<!-- TABLE HOVER -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title"><span class="label label-success">GET</span> <code>https://www.myutr.com/api/v1/player/{user}/clubs</code></h3>
+								</div>
+								<div class="panel-body">
+									<table class="table table-hover">
+										<thead>
+											<tr>
+												<th>Parameter</th>
+												<th>Type</th>
+												<th>Required?</th>
+												<th>Description</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>User ID</td>
+												<td><code>integer</code></td>
+												<td><code>Required</code></td>
+												<td>The User ID can be obtained using a <a href="#search-player">player search</a> or from a profile URL on the <a href="https://www.myutr.com">Universal Tennis</a> website.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<!-- END TABLE HOVER -->
+						</div>
+						<div class="col-md-5">
+							<!-- TABLE HOVER -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title">Response</h3>
+								</div>
+								<div class="panel-body">
+								<pre>[
+  {
+    "clubMemberRole": {
+      "id": 3,
+      "value": "Member"
+    },
+    "id": 6175,
+    "name": "TNT Tennis",
+    "description": "TNT provides quality tennis programs for the following: Hurst Tennis Center, Grapevine, Colleyville, Lewisville, in Flower Mound at Marcus and Roanoke\ncategories",
+    "locationId": 66302,
+    "tierTypeId": 7,
+    "clubSubTypeId": null,
+    "paymentsEnabled": false,
+    "sanctioned": true,
+    "url": "http://tnttennis.net/index.html",
+    "memberCount": 225,
+    "eventCount": 6,
+    "private": false,
+    "isTrialing": false,
+    "trialEndDateUtc": null,
+    "isSearchable": true,
+    "canRunEvents": true,
+    "isHighSchool": false,
+    "isCollege": false,
+    "bannerUrl": "6175/images/banner/ae5bd247-0fb4-4b52-9e04-2cd4e3599b0a.png",
+    "profilePhotoUrl": null,
+    "location": {
+      "locationId": null,
+      "latLng": [
+        32.8205791,
+        -97.1763953
+      ],
+      "display": "Hurst, TX",
+      "googleFormattedName": "701 Mary Dr, Hurst, TX 76053, USA",
+      "googlePlaceId": null,
+      "placeName": null,
+      "streetAddress": "701 Mary Dr",
+      "cityStateZip": "Hurst, TX 76053",
+      "cityName": "Hurst",
+      "cityAbbr": "Hurst",
+      "stateName": "Texas",
+      "stateAbbr": "TX",
+      "countryName": "United States",
+      "countryCode2": "US",
+      "countryCode3": "USA",
+      "countryIoc": "USA"
+    },
+    "statusType": {
+      "id": 2,
+      "value": "active",
+      "label": "Active",
+      "description": "Paid for and operational"
+    },
+    "school": null,
+    "clubMembersSimplified": [
+      /* redacted to conserve length and user privacy */
+    ],
+    "clubImages": {
+      "default": "6175/images/banner/ae5bd247-0fb4-4b52-9e04-2cd4e3599b0a.png",
+      "banner": {
+        "oneX": "6175/images/banner/ae5bd247-0fb4-4b52-9e04-2cd4e3599b0a.png?size=1X&type=banner",
+        "twoX": "6175/images/banner/ae5bd247-0fb4-4b52-9e04-2cd4e3599b0a.png?size=2X&type=banner",
+        "threeX": "6175/images/banner/ae5bd247-0fb4-4b52-9e04-2cd4e3599b0a.png?size=3X&type=banner"
+      },
+      "dashboard": {
+        "oneX": "6175/images/banner/ae5bd247-0fb4-4b52-9e04-2cd4e3599b0a.png?size=1X&type=dashboard",
+        "twoX": "6175/images/banner/ae5bd247-0fb4-4b52-9e04-2cd4e3599b0a.png?size=2X&type=dashboard",
+        "threeX": "6175/images/banner/ae5bd247-0fb4-4b52-9e04-2cd4e3599b0a.png?size=3X&type=dashboard"
+      }
+    },
+    "clubProfileImages": {
+      "default": null,
+      "thumbnail": {
+        "oneX": null,
+        "twoX": null,
+        "threeX": null
+      },
+      "card": {
+        "oneX": null,
+        "twoX": null,
+        "threeX": null
+      },
+      "profile": {
+        "oneX": null,
+        "twoX": null,
+        "threeX": null
+      },
+      "icon": {
+        "oneX": null,
+        "twoX": null,
+        "threeX": null
+      }
+    }
+  }
+]</pre>
+								</div>
+							</div>
+							<!-- END TABLE HOVER -->
+						</div>
+					</div>
+				</div>
+				<hr/>
+<div class="container-fluid" id="player-profile">
+					<h2 class="page-title">Statistics</h2>
+					<h4 class="page-title">Shows historical data and other statistics of a user.</h4>
+					<div class="row">
+						<div class="col-md-7">
+							<!-- TABLE HOVER -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title"><span class="label label-success">GET</span> <code>https://www.myutr.com/api/v1/player/{user}/stats</code></h3>
+								</div>
+								<div class="panel-body">
+									<table class="table table-hover">
+										<thead>
+											<tr>
+												<th>Parameter</th>
+												<th>Type</th>
+												<th>Required?</th>
+												<th>Description</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>User ID</td>
+												<td><code>integer</code></td>
+												<td><code>Required</code></td>
+												<td>The User ID can be obtained using a <a href="#search-player">player search</a> or from a profile URL on the <a href="https://www.myutr.com">Universal Tennis</a> website.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<!-- END TABLE HOVER -->
+						</div>
+						<div class="col-md-5">
+							<!-- TABLE HOVER -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title">Response</h3>
+								</div>
+								<div class="panel-body">
+								<pre></pre>
+								</div>
+							</div>
+							<!-- END TABLE HOVER -->
+						</div>
+					</div>
+				</div>
+				<hr/>
+			</div>
+			<!-- END MAIN CONTENT -->
+		</div>
+		<!-- END MAIN -->
+		<div class="clearfix"></div>
+		<footer>
+			<div class="container-fluid">
+				<p class="copyright">&copy; 2017 <a href="https://www.themeineed.com" target="_blank">Theme I Need</a>. All Rights Reserved.</p>
+			</div>
+		</footer>
+	</div>
+	<!-- END WRAPPER -->
+	<!-- Javascript -->
+	<script>
+	$(document).ready(function() {
+	  $('pre code').each(function(i, block) {
+		hljs.highlightBlock(block);
+	  });
+	});
+	</script>
+	<script src="assets/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="assets/scripts/klorofil-common.js"></script>
+</body>
+
+</html>
