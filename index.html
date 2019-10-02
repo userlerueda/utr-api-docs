@@ -828,7 +828,7 @@
 							<!-- TABLE HOVER -->
 							<div class="panel">
 								<div class="panel-heading">
-									<h3 class="panel-title"><span class="label label-success">GET</span> <code>https://www.myutr.com/api/v1/player/{user}/stats</code></h3>
+									<h3 class="panel-title"><span class="label label-success">GET</span> <code>https://www.myutr.com/api/v1/player/{user_id}/stats</code></h3>
 								</div>
 								<div class="panel-body">
 									<table class="table table-hover">
@@ -843,9 +843,33 @@
 										<tbody>
 											<tr>
 												<td>User ID</td>
-												<td><code>integer</code></td>
+												<td><code>Integer</code></td>
 												<td><code>Required</code></td>
 												<td>The User ID can be obtained using a <a href="#search-player">player search</a> or from a profile URL on the <a href="https://www.myutr.com">Universal Tennis</a> website.</td>
+											</tr>
+											<tr>
+												<td>Type</td>
+												<td><code>String</code></td>
+												<td><code>Required</code></td>
+												<td>Acceptable values are <code>singles</code> and <code>doubles</code>.</td>
+											</tr>
+											<tr>
+												<td>resultType</td>
+												<td><code>String</code></td>
+												<td><code>Required</code></td>
+												<td>Acceptable values are <code>verified</code> and <code>myutr</code>.</td>
+											</tr>
+											<tr>
+												<td>Months</td>
+												<td><code>Integer</code></td>
+												<td><code>Optional</code></td>
+												<td>Gets statistics from <code>x</code> number of months.</td>
+											</tr>
+											<tr>
+												<td>fetchAllResults</td>
+												<td><code>Boolean</code></td>
+												<td><code>Required</code></td>
+												<td>Acceptable values are <code>true</code> or <code>false</code>.</td>
 											</tr>
 										</tbody>
 									</table>
