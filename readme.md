@@ -1,6 +1,4 @@
-# API Documentation Template HTML
-
-Bootstrap Template from Klorofil Template for API Documentation propose.
+# Universal Tennis Rating API Documentation
 
 ## Built With
 
