@@ -406,7 +406,7 @@
 							<!-- TABLE HOVER -->
 							<div class="panel">
 								<div class="panel-heading">
-									<h3 class="panel-title"><span class="label label-success">GET</span> <code>https://www.myutr.com/api/v1/player/{user}/events</code></h3>
+									<h3 class="panel-title"><span class="label label-success">GET</span> <code>https://www.myutr.com/api/v1/player/{user_id}/events</code></h3>
 								</div>
 								<div class="panel-body">
 									<table class="table table-hover">
@@ -686,7 +686,7 @@
 							<!-- TABLE HOVER -->
 							<div class="panel">
 								<div class="panel-heading">
-									<h3 class="panel-title"><span class="label label-success">GET</span> <code>https://www.myutr.com/api/v1/player/{user}/clubs</code></h3>
+									<h3 class="panel-title"><span class="label label-success">GET</span> <code>https://www.myutr.com/api/v1/player/{user_id}/clubs</code></h3>
 								</div>
 								<div class="panel-body">
 									<table class="table table-hover">
@@ -862,8 +862,8 @@
 											<tr>
 												<td>Months</td>
 												<td><code>Integer</code></td>
-												<td><code>Optional</code></td>
-												<td>Gets statistics from <code>x</code> number of months.</td>
+												<td><code>Required</code></td>
+												<td>Gets statistics from <code>6</code> or <code>12</code> months.</td>
 											</tr>
 											<tr>
 												<td>fetchAllResults</td>
@@ -884,7 +884,1230 @@
 									<h3 class="panel-title">Response</h3>
 								</div>
 								<div class="panel-body">
-								<pre></pre>
+								<pre>{
+  "title": "verified singles stats - Last 6 Months",
+  "subtitle": "May 2019 - October 2019",
+  "monthsCount": 6,
+  "currentRating": 16.16,
+  "ratingCircle": {
+    "singlesUtr": 16.16,
+    "ratingStatusSingles": "Rated",
+    "ratingProgressSingles": 100
+  },
+  "winsCount": 25,
+  "lossesCount": 4,
+  "recordWinPercentage": "86.2%",
+  "notableMatch": {
+    "eventViewModel": null,
+    "date": "2019-07-14T13:00:00",
+    "id": 16705659,
+    "clubIds": [],
+    "players": {
+      "winner1": {
+        "eventViewModel": null,
+        "id": "3478",
+        "firstName": "Novak",
+        "lastName": "Djokovic",
+        "gender": "M",
+        "city": null,
+        "state": null,
+        "singlesUtr": 16.16,
+        "ratingStatusSingles": "Rated",
+        "ratingProgressSingles": "100",
+        "ratingStatusImgageSingles": "https://universaltennis.com/azure/images/icons/status-rated.png?h=17",
+        "doublesUtr": 14.93,
+        "ratingStatusDoubles": "Rated",
+        "ratingProgressDoubles": "100",
+        "ratingStatusImgageDoubles": "https://universaltennis.com/azure/images/icons/status-rated.png?h=17",
+        "importSource": null,
+        "nationality": "SRB",
+        "myUtrSingles": 16.41,
+        "myUtrStatusSingles": "Unrated",
+        "myUtrDoubles": 11.61,
+        "myUtrStatusDoubles": "Unrated",
+        "memberId": null
+      },
+      "winner2": null,
+      "loser1": {
+        "eventViewModel": null,
+        "id": "3456",
+        "firstName": "Roger",
+        "lastName": "Federer",
+        "gender": "M",
+        "city": null,
+        "state": null,
+        "singlesUtr": 16.14,
+        "ratingStatusSingles": "Rated",
+        "ratingProgressSingles": "100",
+        "ratingStatusImgageSingles": "https://universaltennis.com/azure/images/icons/status-rated.png?h=17",
+        "doublesUtr": 0,
+        "ratingStatusDoubles": "Unrated",
+        "ratingProgressDoubles": "0",
+        "ratingStatusImgageDoubles": null,
+        "importSource": null,
+        "nationality": null,
+        "myUtrSingles": 16.14,
+        "myUtrStatusSingles": "Rated",
+        "myUtrDoubles": 0,
+        "myUtrStatusDoubles": "Unrated",
+        "memberId": null
+      },
+      "loser2": null
+    },
+    "videos": null,
+    "round": {
+      "id": 1,
+      "code": "F",
+      "name": "Finals",
+      "size": 2,
+      "number": null
+    },
+    "sourceType": null,
+    "completionType": null,
+    "outcome": "completed",
+    "isWinner": true,
+    "playerPostedResult": false,
+    "finalized": true,
+    "submittingMemberId": 0,
+    "excludeFromRating": false,
+    "actions": {
+      "delete": {
+        "allowed": false
+      },
+      "edit": {
+        "allowed": false
+      },
+      "accept": {
+        "allowed": false
+      },
+      "reject": {
+        "allowed": false
+      },
+      "resendInvite": {
+        "allowed": false
+      }
+    },
+    "isRejected": false,
+    "score": {
+      "1": {
+        "winner": 7,
+        "loser": 6,
+        "tiebreak": 5,
+        "winnerTiebreak": 7
+      },
+      "2": {
+        "winner": 1,
+        "loser": 6,
+        "tiebreak": null,
+        "winnerTiebreak": null
+      },
+      "3": {
+        "winner": 7,
+        "loser": 6,
+        "tiebreak": 4,
+        "winnerTiebreak": 7
+      },
+      "4": {
+        "winner": 4,
+        "loser": 6,
+        "tiebreak": null,
+        "winnerTiebreak": null
+      },
+      "5": {
+        "winner": 13,
+        "loser": 12,
+        "tiebreak": 3,
+        "winnerTiebreak": 7
+      }
+    },
+    "winner1Status": null,
+    "winner2Status": null,
+    "loser1Status": null,
+    "loser2Status": null
+  },
+  "notableMatchEventName": "Wimbledon",
+  "playerFirstInitialLastName": "N. Djokovic",
+  "playerIsPro": true,
+  "startRating": 16,
+  "minRating": 16.11,
+  "maxRating": 16.26,
+  "ratingTrend": {
+    "rating": 16,
+    "ratingDifference": 0.16000000000000014,
+    "changeDirection": "down"
+  },
+  "ratingTrendChart": {
+    "minRating": 16.110369790681222,
+    "maxRating": 16.26,
+    "chartTicksPerMonth": 20,
+    "months": [
+      {
+        "month": {
+          "name": "May",
+          "abbr": "MAY"
+        },
+        "ratings": [
+          {
+            "index": 20,
+            "rating": 16.23
+          },
+          {
+            "index": 25,
+            "rating": 16.23
+          },
+          {
+            "index": 30,
+            "rating": 16.23
+          },
+          {
+            "index": 35,
+            "rating": 16.21
+          }
+        ],
+        "minRating": 16.21,
+        "maxRating": 16.25,
+        "startRating": 16.23,
+        "endRating": 16.23,
+        "results": [
+          {
+            "index": 24,
+            "rating": 15.55,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Tue May 7 Win vs. T. Fritz (15.56) 6-4, 6-2"
+              }
+            ]
+          },
+          {
+            "index": 27,
+            "rating": 15.9,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Sat May 11 Win vs. D. Thiem (15.91) 7-6(2), 7-6(4)"
+              }
+            ]
+          },
+          {
+            "index": 25,
+            "rating": 15.4,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Thu May 9 Win vs. J. Chardy (15.42) 6-1, 7-6(2)"
+              }
+            ]
+          },
+          {
+            "index": 30,
+            "rating": 15.55,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Thu May 16 Win vs. D. Shapovalov (15.55) 6-1, 6-3"
+              }
+            ]
+          },
+          {
+            "index": 30,
+            "rating": 15.25,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Thu May 16 Win vs. P. Kohlschreiber (15.25) 6-3, 6-0"
+              }
+            ]
+          },
+          {
+            "index": 31,
+            "rating": 15.9,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Fri May 17 Win vs. J. Del Potro (15.89) 4-6, 7-6(6), 6-4"
+              }
+            ]
+          },
+          {
+            "index": 31,
+            "rating": 15.7,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Sat May 18 Win vs. D. Schwartzman (15.69) 6-3, 6-7(2), 6-3"
+              }
+            ]
+          },
+          {
+            "index": 37,
+            "rating": 15.6,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Mon May 27 Win vs. H. Hurkacz (15.58) 6-4, 6-2, 6-2"
+              }
+            ]
+          },
+          {
+            "index": 39,
+            "rating": 14.95,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Thu May 30 Win vs. H. Laaksonen (14.97) 6-1, 6-4, 6-3"
+              }
+            ]
+          },
+          {
+            "index": 32,
+            "rating": 16.3,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 0,
+              "lossesCount": 1,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Sun May 19 Loss vs. R. Nadal (16.32) 6-0, 4-6, 6-1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "month": {
+          "name": "June",
+          "abbr": "JUN"
+        },
+        "ratings": [
+          {
+            "index": 40,
+            "rating": 16.23
+          },
+          {
+            "index": 45,
+            "rating": 16.26
+          },
+          {
+            "index": 50,
+            "rating": 16.110369790681222
+          },
+          {
+            "index": 55,
+            "rating": 16.110369790681222
+          }
+        ],
+        "minRating": 16.110369790681222,
+        "maxRating": 16.26,
+        "startRating": 16.23,
+        "endRating": 16.110369790681222,
+        "results": [
+          {
+            "index": 40,
+            "rating": 15.05,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Sat Jun 1 Win vs. S. Caruso (15.05) 6-3, 6-3, 6-2"
+              }
+            ]
+          },
+          {
+            "index": 41,
+            "rating": 15.65,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Mon Jun 3 Win vs. J. Struff (15.65) 6-3, 6-2, 6-2"
+              }
+            ]
+          },
+          {
+            "index": 43,
+            "rating": 15.5,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Thu Jun 6 Win vs. A. Zverev (15.49) 7-5, 6-2, 6-2"
+              }
+            ]
+          },
+          {
+            "index": 44,
+            "rating": 15.9,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 0,
+              "lossesCount": 1,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Fri Jun 7 Loss vs. D. Thiem (15.91) 6-2, 3-6, 7-5, 5-7, 7-5"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "month": {
+          "name": "July",
+          "abbr": "JUL"
+        },
+        "ratings": [
+          {
+            "index": 60,
+            "rating": 16.110369790681222
+          },
+          {
+            "index": 65,
+            "rating": 16.110369790681222
+          },
+          {
+            "index": 70,
+            "rating": 16.13151752928816
+          },
+          {
+            "index": 75,
+            "rating": 16.13151752928816
+          }
+        ],
+        "minRating": 16.110369790681222,
+        "maxRating": 16.146173504331458,
+        "startRating": 16.110369790681222,
+        "endRating": 16.13151752928816,
+        "results": [
+          {
+            "index": 60,
+            "rating": 15.25,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Mon Jul 1 Win vs. P. Kohlschreiber (15.25) 6-3, 7-5, 6-3"
+              }
+            ]
+          },
+          {
+            "index": 61,
+            "rating": 15.05,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Wed Jul 3 Win vs. D. Kudla (15.05) 6-3, 6-2, 6-2"
+              }
+            ]
+          },
+          {
+            "index": 63,
+            "rating": 15.6,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Fri Jul 5 Win vs. H. Hurkacz (15.58) 7-5, 6-7(5), 6-1, 6-4"
+              }
+            ]
+          },
+          {
+            "index": 65,
+            "rating": 15.25,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Mon Jul 8 Win vs. U. Humbert (15.23) 6-3, 6-2, 6-3"
+              }
+            ]
+          },
+          {
+            "index": 66,
+            "rating": 15.75,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Wed Jul 10 Win vs. D. Goffin (15.76) 6-4, 6-0, 6-2"
+              }
+            ]
+          },
+          {
+            "index": 67,
+            "rating": 15.8,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Fri Jul 12 Win vs. R. Bautista-Agut (15.81) 6-2, 4-6, 6-3, 6-2"
+              }
+            ]
+          },
+          {
+            "index": 69,
+            "rating": 16.15,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Sun Jul 14 Win vs. R. Federer (16.14) 7-6(5), 1-6, 7-6(4), 4-6, 13-12(3)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "month": {
+          "name": "August",
+          "abbr": "AUG"
+        },
+        "ratings": [
+          {
+            "index": 80,
+            "rating": 16.13151752928816
+          },
+          {
+            "index": 85,
+            "rating": 16.13151752928816
+          },
+          {
+            "index": 90,
+            "rating": 16.151791273748284
+          },
+          {
+            "index": 95,
+            "rating": 16.151791273748284
+          }
+        ],
+        "minRating": 16.13151752928816,
+        "maxRating": 16.175093058260426,
+        "startRating": 16.13151752928816,
+        "endRating": 16.175093058260426,
+        "results": [
+          {
+            "index": 88,
+            "rating": 15.55,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Tue Aug 13 Win vs. S. Querrey (15.53) 7-5, 6-1"
+              }
+            ]
+          },
+          {
+            "index": 89,
+            "rating": 15.55,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Thu Aug 15 Win vs. P. Carreno-Busta (15.53) 6-3, 6-4"
+              }
+            ]
+          },
+          {
+            "index": 91,
+            "rating": 15.45,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Sat Aug 17 Win vs. L. Pouille (15.47) 7-6(2), 6-1"
+              }
+            ]
+          },
+          {
+            "index": 97,
+            "rating": 15.2,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Mon Aug 26 Win vs. R. Carballes Baena (15.2) 6-4, 6-1, 6-4"
+              }
+            ]
+          },
+          {
+            "index": 98,
+            "rating": 15.4,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Wed Aug 28 Win vs. J. Londero (15.4) 6-4, 7-6(3), 6-1"
+              }
+            ]
+          },
+          {
+            "index": 100,
+            "rating": 15.05,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 1,
+              "lossesCount": 0,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Sat Aug 31 Win vs. D. Kudla (15.05) 6-3, 6-4, 6-2"
+              }
+            ]
+          },
+          {
+            "index": 91,
+            "rating": 16,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 0,
+              "lossesCount": 1,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Sat Aug 17 Loss vs. D. Medvedev (16.01) 3-6, 6-3, 6-3"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "month": {
+          "name": "September",
+          "abbr": "SEP"
+        },
+        "ratings": [
+          {
+            "index": 100,
+            "rating": 16.175093058260426
+          },
+          {
+            "index": 105,
+            "rating": 16.175093058260426
+          },
+          {
+            "index": 110,
+            "rating": 16.16024978287084
+          },
+          {
+            "index": 115,
+            "rating": 16.16024978287084
+          }
+        ],
+        "minRating": 16.16024978287084,
+        "maxRating": 16.175093058260426,
+        "startRating": 16.175093058260426,
+        "endRating": 16.16024978287084,
+        "results": [
+          {
+            "index": 101,
+            "rating": 15.65,
+            "aggregate": {
+              "count": 1,
+              "winsCount": 0,
+              "lossesCount": 1,
+              "tiesCount": 0
+            },
+            "descriptions": [
+              {
+                "details": "Mon Sep 2 Loss vs. S. Wawrinka (15.66) 6-4, 7-5, 2-1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "month": {
+          "name": "October",
+          "abbr": "OCT"
+        },
+        "ratings": [
+          {
+            "index": 120,
+            "rating": 16.16024978287084
+          },
+          {
+            "index": 125,
+            "rating": 16.16024978287084
+          },
+          {
+            "index": 130,
+            "rating": null
+          },
+          {
+            "index": 135,
+            "rating": null
+          }
+        ],
+        "minRating": 16.16024978287084,
+        "maxRating": 16.16024978287084,
+        "startRating": 16.16024978287084,
+        "endRating": 16.16024978287084,
+        "results": []
+      }
+    ],
+    "minRatingForScale": 14.625,
+    "maxRatingForScale": 16.5,
+    "ratingScaleStepSize": 0.125,
+    "maxNonRatingScaleChartTicks": 140,
+    "nonRatingScaleStepSize": 0
+  },
+  "victoryMarginChart": {
+    "currentRating": 16.16,
+    "results": [
+      {
+        "index": 66,
+        "rating": 15.55,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Tue May 7 Win vs. T. Fritz (15.56) 6-4, 6-2"
+          }
+        ]
+      },
+      {
+        "index": 54,
+        "rating": 15.9,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Sat May 11 Win vs. D. Thiem (15.91) 7-6(2), 7-6(4)"
+          }
+        ]
+      },
+      {
+        "index": 66,
+        "rating": 15.4,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Thu May 9 Win vs. J. Chardy (15.42) 6-1, 7-6(2)"
+          }
+        ]
+      },
+      {
+        "index": 75,
+        "rating": 15.55,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Thu May 16 Win vs. D. Shapovalov (15.55) 6-1, 6-3"
+          }
+        ]
+      },
+      {
+        "index": 81,
+        "rating": 15.25,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Thu May 16 Win vs. P. Kohlschreiber (15.25) 6-3, 6-0"
+          }
+        ]
+      },
+      {
+        "index": 51,
+        "rating": 15.9,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Fri May 17 Win vs. J. Del Potro (15.89) 4-6, 7-6(6), 6-4"
+          }
+        ]
+      },
+      {
+        "index": 57,
+        "rating": 15.7,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Sat May 18 Win vs. D. Schwartzman (15.69) 6-3, 6-7(2), 6-3"
+          }
+        ]
+      },
+      {
+        "index": 69,
+        "rating": 15.6,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Mon May 27 Win vs. H. Hurkacz (15.58) 6-4, 6-2, 6-2"
+          }
+        ]
+      },
+      {
+        "index": 69,
+        "rating": 14.95,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Thu May 30 Win vs. H. Laaksonen (14.97) 6-1, 6-4, 6-3"
+          }
+        ]
+      },
+      {
+        "index": 69,
+        "rating": 15.05,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Sat Jun 1 Win vs. S. Caruso (15.05) 6-3, 6-3, 6-2"
+          }
+        ]
+      },
+      {
+        "index": 72,
+        "rating": 15.65,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Mon Jun 3 Win vs. J. Struff (15.65) 6-3, 6-2, 6-2"
+          }
+        ]
+      },
+      {
+        "index": 69,
+        "rating": 15.5,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Thu Jun 6 Win vs. A. Zverev (15.49) 7-5, 6-2, 6-2"
+          }
+        ]
+      },
+      {
+        "index": 63,
+        "rating": 15.25,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Mon Jul 1 Win vs. P. Kohlschreiber (15.25) 6-3, 7-5, 6-3"
+          }
+        ]
+      },
+      {
+        "index": 72,
+        "rating": 15.05,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Wed Jul 3 Win vs. D. Kudla (15.05) 6-3, 6-2, 6-2"
+          }
+        ]
+      },
+      {
+        "index": 60,
+        "rating": 15.6,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Fri Jul 5 Win vs. H. Hurkacz (15.58) 7-5, 6-7(5), 6-1, 6-4"
+          }
+        ]
+      },
+      {
+        "index": 69,
+        "rating": 15.25,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Mon Jul 8 Win vs. U. Humbert (15.23) 6-3, 6-2, 6-3"
+          }
+        ]
+      },
+      {
+        "index": 75,
+        "rating": 15.75,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Wed Jul 10 Win vs. D. Goffin (15.76) 6-4, 6-0, 6-2"
+          }
+        ]
+      },
+      {
+        "index": 63,
+        "rating": 15.8,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Fri Jul 12 Win vs. R. Bautista-Agut (15.81) 6-2, 4-6, 6-3, 6-2"
+          }
+        ]
+      },
+      {
+        "index": 48,
+        "rating": 16.15,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Sun Jul 14 Win vs. R. Federer (16.14) 7-6(5), 1-6, 7-6(4), 4-6, 13-12(3)"
+          }
+        ]
+      },
+      {
+        "index": 69,
+        "rating": 15.55,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Tue Aug 13 Win vs. S. Querrey (15.53) 7-5, 6-1"
+          }
+        ]
+      },
+      {
+        "index": 63,
+        "rating": 15.55,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Thu Aug 15 Win vs. P. Carreno-Busta (15.53) 6-3, 6-4"
+          }
+        ]
+      },
+      {
+        "index": 66,
+        "rating": 15.45,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Sat Aug 17 Win vs. L. Pouille (15.47) 7-6(2), 6-1"
+          }
+        ]
+      },
+      {
+        "index": 66,
+        "rating": 15.2,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Mon Aug 26 Win vs. R. Carballes Baena (15.2) 6-4, 6-1, 6-4"
+          }
+        ]
+      },
+      {
+        "index": 63,
+        "rating": 15.4,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Wed Aug 28 Win vs. J. Londero (15.4) 6-4, 7-6(3), 6-1"
+          }
+        ]
+      },
+      {
+        "index": 66,
+        "rating": 15.05,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 1,
+          "lossesCount": 0,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Sat Aug 31 Win vs. D. Kudla (15.05) 6-3, 6-4, 6-2"
+          }
+        ]
+      },
+      {
+        "index": 30,
+        "rating": 16.3,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 0,
+          "lossesCount": 1,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Sun May 19 Loss vs. R. Nadal (16.32) 6-0, 4-6, 6-1"
+          }
+        ]
+      },
+      {
+        "index": 48,
+        "rating": 15.9,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 0,
+          "lossesCount": 1,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Fri Jun 7 Loss vs. D. Thiem (15.91) 6-2, 3-6, 7-5, 5-7, 7-5"
+          }
+        ]
+      },
+      {
+        "index": 45,
+        "rating": 16,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 0,
+          "lossesCount": 1,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Sat Aug 17 Loss vs. D. Medvedev (16.01) 3-6, 6-3, 6-3"
+          }
+        ]
+      },
+      {
+        "index": 39,
+        "rating": 15.65,
+        "aggregate": {
+          "count": 1,
+          "winsCount": 0,
+          "lossesCount": 1,
+          "tiesCount": 0
+        },
+        "descriptions": [
+          {
+            "details": "Mon Sep 2 Loss vs. S. Wawrinka (15.66) 6-4, 7-5, 2-1"
+          }
+        ]
+      }
+    ],
+    "minRatingForScale": 14.625,
+    "maxRatingForScale": 16.5,
+    "ratingScaleStepSize": 0.125,
+    "maxNonRatingScaleChartTicks": 100,
+    "nonRatingScaleStepSize": 20
+  }
+}</pre>
 								</div>
 							</div>
 							<!-- END TABLE HOVER -->
