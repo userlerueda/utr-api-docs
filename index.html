@@ -66,17 +66,7 @@
 									<li><a href="#club-profile" class="">Profile &nbsp; <span class="label label-success">GET</span></a></li>
 									<li><a href="#club-results" class="">Results &nbsp; <span class="label label-success">GET</span></a></li>
 									<li><a href="#club-members" class="">Members &nbsp; <span class="label label-success">GET</span></a></li>
-								</ul>
-							</div>
-						</li>
-						<li>
-							<a href="#school" data-toggle="collapse" class="collapsed"><i class="fa fa-graduation-cap"></i> <span>School</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-							<div id="school" class="collapse ">
-								<ul class="nav">
-									<li><a href="#club-profile" class="">Profile &nbsp; <span class="label label-success">GET</span></a></li>
-									<li><a href="#club-results" class="">Results &nbsp; <span class="label label-success">GET</span></a></li>
-									<li><a href="#player-events" class="">Roster &nbsp; <span class="label label-success">GET</span></a></li>
-									<li><a href="#player-clubs" class="">Members &nbsp; <span class="label label-success">GET</span></a></li>
+									<li><a href="#club-school" class="">School Roster &nbsp; <span class="label label-success">GET</span></a></li>
 								</ul>
 							</div>
 						</li>
@@ -3407,6 +3397,397 @@
     "isPro": false
   }
 ]</pre>
+								</div>
+							</div>
+							<!-- END TABLE HOVER -->
+						</div>
+					</div>
+				</div>
+				<hr/>
+				<div style="background: gray">
+				<h1 style="margin-left: 20px; color: white;"><strong>Clubs</strong></h1>
+				</div>
+				<hr/>
+				<div class="container-fluid" id="club-profile">
+					<h2 class="page-title"><strong>Profile<strong/></h2>
+					<h4 class="page-title">Club profile information including location, events, etc.</h4>
+					<div class="row">
+						<div class="">
+							<!-- TABLE HOVER -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title"><span class="label label-success">GET</span> <code>https://www.myutr.com/api/v1/club/{club_id}</code></h3>
+								</div>
+								<div class="panel-body">
+									<table class="table table-hover">
+										<thead>
+											<tr>
+												<th>Parameter</th>
+												<th>Type</th>
+												<th>Required?</th>
+												<th>Description</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Club ID</td>
+												<td><code>Integer</code></td>
+												<td><code>Required</code></td>
+												<td>The Club ID can be obtained using a <a href="#search-club">club search</a> or from a club URL on the <a href="https://www.myutr.com">Universal Tennis</a> website.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<!-- END TABLE HOVER -->
+						</div>
+						<div class="">
+							<!-- TABLE HOVER -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title"><button data-toggle="collapse" data-target="#c-club-profile">Show Sample Response</button></h3>
+								</div>
+								<div class="panel-body collapse" id="c-club-profile">
+								<pre>{
+  "id": 1,
+  "name": "Ryan's Tennis Club",
+  "description": "This club is for causal tennis players",
+  "locationId": 335,
+  "photoCount": 0,
+  "paymentsEnabled": false,
+  "memberCount": 2,
+  "ownerCount": 1,
+  "adminCount": 1,
+  "resultCount": 0,
+  "availableMemberSlots": -1,
+  "availableOwnerSlots": 1,
+  "availableAdminSlots": 3,
+  "isTournamentClub": false,
+  "isPro": true,
+  "isEnterprise": false,
+  "isSpecial": false,
+  "isFreeCollege": false,
+  "isProCollege": false,
+  "clubHasSchool": false,
+  "canHaveMultipleAdmins": true,
+  "canHaveMultipleOwners": true,
+  "sanctioned": true,
+  "url": null,
+  "bannerUrl": "1/images/banner/72cf5930-2c1b-4a5f-8fab-33f9990c511d.jpg",
+  "eventCount": 0,
+  "demoEventCount": 0,
+  "location": {
+    "locationId": 335,
+    "latLng": [
+      28.5383355,
+      -81.3792365
+    ],
+    "display": "Orlando, FL",
+    "googleFormattedName": "Orlando, FL, USA",
+    "googlePlaceId": "ChIJd7zN_thz54gRnr-lPAaywwo",
+    "placeName": null,
+    "streetAddress": "",
+    "cityStateZip": "Orlando, FL",
+    "cityName": "Orlando",
+    "cityAbbr": "Orlando",
+    "stateName": "Florida",
+    "stateAbbr": "FL",
+    "countryName": "United States",
+    "countryCode2": "US",
+    "countryCode3": "USA",
+    "countryIoc": "USA"
+  },
+  "clubMembers": [
+    {
+      "memberId": 1293,
+      "clubMemberRoleId": 2,
+      "firstName": "Pro Plus",
+      "lastName": "Subscription",
+      "intialJoinDate": "2018-05-15T22:18:29",
+      "role": "Admin",
+      "clubMemberTypeId": 2,
+      "isPower": false,
+      "isPoweredByClub": false,
+      "isPoweredBySubscription": true,
+      "location": "Palo Alto, CA",
+      "gender": "M",
+      "playerId": null,
+      "singlesUtr": null,
+      "ratingStatusSingles": null,
+      "doublesUtr": null,
+      "ratingStatusDoubles": null,
+      "myUtrSingles": null,
+      "myUtrDoubles": null,
+      "myUtrSinglesReliability": null,
+      "myUtrDoublesReliability": null,
+      "myUtrStatusSingles": null,
+      "myUtrStatusDoubles": null,
+      "myUtrSinglesStatusValue": null,
+      "myUtrDoublesStatusValue": null,
+      "nationality": null,
+      "ratingChoice": null,
+      "playerProfileImages": {
+        "default": null,
+        "thumbnail": {
+          "oneX": null,
+          "twoX": null,
+          "threeX": null
+        },
+        "card": {
+          "oneX": null,
+          "twoX": null,
+          "threeX": null
+        },
+        "profile": {
+          "oneX": null,
+          "twoX": null,
+          "threeX": null
+        },
+        "icon": {
+          "oneX": null,
+          "twoX": null,
+          "threeX": null
+        }
+      },
+      "displayName": "Pro Plus Subscription",
+      "isPro": false
+    },
+    {
+      "memberId": 5850,
+      "clubMemberRoleId": 1,
+      "firstName": "Ryan",
+      "lastName": "Ward",
+      "intialJoinDate": "2018-05-14T02:44:13",
+      "role": "Owner",
+      "clubMemberTypeId": 2,
+      "isPower": false,
+      "isPoweredByClub": false,
+      "isPoweredBySubscription": true,
+      "location": "Orlando, FL",
+      "gender": "M",
+      "playerId": "1526515",
+      "singlesUtr": "0",
+      "ratingStatusSingles": "Unrated",
+      "doublesUtr": "0",
+      "ratingStatusDoubles": "Unrated",
+      "myUtrSingles": 3,
+      "myUtrDoubles": 3,
+      "myUtrSinglesReliability": 0,
+      "myUtrDoublesReliability": 0,
+      "myUtrStatusSingles": "Unrated",
+      "myUtrStatusDoubles": "Unrated",
+      "myUtrSinglesStatusValue": 0,
+      "myUtrDoublesStatusValue": 0,
+      "nationality": "USA",
+      "ratingChoice": null,
+      "playerProfileImages": {
+        "default": null,
+        "thumbnail": {
+          "oneX": null,
+          "twoX": null,
+          "threeX": null
+        },
+        "card": {
+          "oneX": null,
+          "twoX": null,
+          "threeX": null
+        },
+        "profile": {
+          "oneX": null,
+          "twoX": null,
+          "threeX": null
+        },
+        "icon": {
+          "oneX": null,
+          "twoX": null,
+          "threeX": null
+        }
+      },
+      "displayName": "Ryan Ward",
+      "isPro": false
+    }
+  ],
+  "tmsEvents": [],
+  "teamMatches": [],
+  "currentMember": {
+    "role": null,
+    "clubMemberRequest": null
+  },
+  "formerClubMembers": null,
+  "clubMemberRequests": [],
+  "clubMemberInvites": null,
+  "tmsPercentFee": null,
+  "verificationApplicationStatus": "",
+  "private": false,
+  "tierType": {
+    "id": 2,
+    "name": "Pro",
+    "maxOwners": 2,
+    "maxMembers": 0,
+    "maxOrganizers": 4,
+    "enablePayments": true,
+    "verificationAllowed": true,
+    "canRunEvents": true,
+    "canPostScores": true,
+    "isSearchable": true,
+    "isCollege": false,
+    "isHighSchool": false,
+    "permissionedTmsEventTypes": [
+      {
+        "id": 1,
+        "value": "tournament",
+        "label": "Tournament",
+        "description": "Create draws types such as round robins, compass draws, and traditional formats"
+      },
+      {
+        "id": 5,
+        "value": "camp",
+        "label": "Camp",
+        "description": "Group players by UTR and post match play scores"
+      },
+      {
+        "id": 6,
+        "value": "clinic",
+        "label": "Clinic",
+        "description": "Group players by UTR during drills and match play"
+      },
+      {
+        "id": 7,
+        "value": "match_play",
+        "label": "Match Play",
+        "description": "Less structured schedule of play. Match players up when they arrive and post scores!"
+      }
+    ]
+  },
+  "statusType": {
+    "id": 4,
+    "value": "suspended",
+    "label": "Suspended",
+    "description": "Payment hasn't gone through past the 30 day grace period so now the account is suspended"
+  },
+  "clubType": null,
+  "clubSubType": null,
+  "tmsFeeMaximum": null,
+  "verificationFee": null,
+  "isTrialing": false,
+  "trialEndDateUtc": null,
+  "sponsorLogoUrl": null,
+  "schoolProfile": null,
+  "teamRoles": [],
+  "currency": {
+    "id": 1,
+    "name": "Dollars",
+    "abbreviation": "USD",
+    "symbol": "$"
+  },
+  "clubImages": {
+    "default": "1/images/banner/72cf5930-2c1b-4a5f-8fab-33f9990c511d.jpg",
+    "banner": {
+      "oneX": "1/images/banner/72cf5930-2c1b-4a5f-8fab-33f9990c511d.jpg?size=1X&type=banner",
+      "twoX": "1/images/banner/72cf5930-2c1b-4a5f-8fab-33f9990c511d.jpg?size=2X&type=banner",
+      "threeX": "1/images/banner/72cf5930-2c1b-4a5f-8fab-33f9990c511d.jpg?size=3X&type=banner"
+    },
+    "dashboard": {
+      "oneX": "1/images/banner/72cf5930-2c1b-4a5f-8fab-33f9990c511d.jpg?size=1X&type=dashboard",
+      "twoX": "1/images/banner/72cf5930-2c1b-4a5f-8fab-33f9990c511d.jpg?size=2X&type=dashboard",
+      "threeX": "1/images/banner/72cf5930-2c1b-4a5f-8fab-33f9990c511d.jpg?size=3X&type=dashboard"
+    }
+  },
+  "canRunEvents": true,
+  "referralCode": "ryansten586",
+  "clubPromoCreditBalance": {
+    "balance": 0,
+    "currency": {
+      "id": 1,
+      "name": "Dollars",
+      "abbreviation": "USD",
+      "symbol": "$"
+    }
+  },
+  "profilePhotoUrl": null,
+  "clubProfileImages": {
+    "default": null,
+    "thumbnail": {
+      "oneX": null,
+      "twoX": null,
+      "threeX": null
+    },
+    "card": {
+      "oneX": null,
+      "twoX": null,
+      "threeX": null
+    },
+    "profile": {
+      "oneX": null,
+      "twoX": null,
+      "threeX": null
+    },
+    "icon": {
+      "oneX": null,
+      "twoX": null,
+      "threeX": null
+    }
+  },
+  "maxPowerUsers": 0,
+  "currentPowerUsers": 0,
+  "clubContract": null,
+  "upcomingEvents": [],
+  "recentEvents": [],
+  "refereeBonus": null,
+  "referrerBonus": null,
+  "lastEventIds": {
+    "1": 582
+  }
+}</pre>
+								</div>
+							</div>
+							<!-- END TABLE HOVER -->
+						</div>
+					</div>
+				</div>
+				<hr/>
+				
+				<div class="container-fluid" id="club-school">
+					<h2 class="page-title"><strong>School Roster<strong/></h2>
+					<h4 class="page-title">Get roster for a high school or college.</h4>
+					<div class="row">
+						<div class="">
+							<!-- TABLE HOVER -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title"><span class="label label-success">GET</span> <code>https://www.myutr.com/api/v1/club/{club_id}/school</code></h3>
+								</div>
+								<div class="panel-body">
+									<table class="table table-hover">
+										<thead>
+											<tr>
+												<th>Parameter</th>
+												<th>Type</th>
+												<th>Required?</th>
+												<th>Description</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Club ID</td>
+												<td><code>Integer</code></td>
+												<td><code>Required</code></td>
+												<td>The Club ID can be obtained using a <a href="#search-club">club search</a> or from a club URL on the <a href="https://www.myutr.com">Universal Tennis</a> website.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<!-- END TABLE HOVER -->
+						</div>
+						<div class="">
+							<!-- TABLE HOVER -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title"><button data-toggle="collapse" data-target="#c-club-school">Show Sample Response</button></h3>
+								</div>
+								<div class="panel-body collapse" id="c-club-school">
+								<pre></pre>
 								</div>
 							</div>
 							<!-- END TABLE HOVER -->
