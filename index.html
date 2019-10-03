@@ -108,7 +108,6 @@
 		<!-- END LEFT SIDEBAR -->
 		<!-- MAIN -->
 		<div class="main">
-				<hr/>
 			<!-- MAIN CONTENT -->
 			<div class="main-content">
 				<div class="container-fluid" id="player-profile">
@@ -134,7 +133,7 @@
 										<tbody>
 											<tr>
 												<td>User ID</td>
-												<td><code>integer</code></td>
+												<td><code>Integer</code></td>
 												<td><code>Required</code></td>
 												<td>The User ID can be obtained using a <a href="#search-player">player search</a> or from a profile URL on the <a href="https://www.myutr.com">Universal Tennis</a> website.</td>
 											</tr>
@@ -206,21 +205,27 @@
 										<tbody>
 											<tr>
 												<td>User ID</td>
-												<td><code>integer</code></td>
+												<td><code>Integer</code></td>
 												<td><code>Required</code></td>
 												<td>The User ID can be obtained using a <a href="#search-player">player search</a> or from a profile URL on the <a href="https://www.myutr.com">Universal Tennis</a> website.</td>
 											</tr>
 											<tr>
 												<td>Year</td>
-												<td><code>integer</code></td>
+												<td><code>Integer</code></td>
 												<td><code>Optional</code></td>
 												<td>Use <code>?year={year}</code> to filter results by a certain year. You may also use <code>?year=last</code> to get the latest results.</td>
 											</tr>
 											<tr>
 												<td>Type</td>
-												<td><code>string</code></td>
+												<td><code>String</code></td>
 												<td><code>Optional</code></td>
 												<td>If not included in the request, singles results will be displayed. Valid values are <code>singles</code> and <code>doubles</code>.</td>
+											</tr>
+											<tr>
+												<td>resultType</td>
+												<td><code>String</code></td>
+												<td><code>Optional</code></td>
+												<td>If not included in the request, all results will be displayed. Valid values are <code>sanctioned</code> and <code>myutr</code>.</td>
 											</tr>
 										</tbody>
 									</table>
